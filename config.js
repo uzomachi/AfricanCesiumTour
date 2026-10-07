@@ -8,6 +8,6 @@
    This file is public on GitHub Pages, so use a restricted token. Never share a real token in chats.
    Leave the placeholders and the app still runs on a plain grid globe (no 3D scans). */
 window.APP_CONFIG = {
-  CESIUM_ION_TOKEN: "YOUR_CESIUM_ION_TOKEN",
+  CESIUM_ION_TOKEN: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub25jZSI6ImhabEhENEwzVFVScGZPQ1giLCJqdGkiOiJlZWJlNWVmNi0wZWY3LTRhYzktOGVjZC05MjI1MGNjZjdlYTUiLCJpZCI6MzQ4MTcsInN1YiI6IlV6b21hY2hpIiwiaXNzIjoiaHR0cHM6Ly9hcGkuY2VzaXVtLmNvbSIsImF1ZCI6IkFmcmljYW5DZXNpdW1Ub3VyIiwiaWF0IjoxNzkxMzc5MjgwfQ.d2M_wkVGRYMq_8ExYLmHD56O7eDmLpayfpz9vf_nLIA",
   GOOGLE_MAPS_API_KEY: "YOUR_GOOGLE_MAP_TILES_API_KEY"
 };
