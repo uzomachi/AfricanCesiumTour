@@ -1,0 +1,53 @@
+ID,Type,Check,Expected,Actual,Result,Evidence,Run by / date
+A01,Automated (node tests.js),Next moves forward,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A02,Automated (node tests.js),Next wraps from the last stop to the first,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A03,Automated (node tests.js),Previous wraps from the first stop to the last,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A04,Automated (node tests.js),Empty list does not crash,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A05,Automated (node tests.js),A complete record is usable,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A06,Automated (node tests.js),"Missing longitude is flagged, not guessed",PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A07,Automated (node tests.js),Longitude 200 is out of range,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A08,Automated (node tests.js),Swapped longitude/latitude is caught,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A09,Automated (node tests.js),Missing source is flagged,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A10,Automated (node tests.js),Photo without alt text is flagged,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A11,Automated (node tests.js),usable() drops bad records only,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A12,Automated (node tests.js),Every record in places.js is usable,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A13,Automated (node tests.js),places.js has at least 3 stops,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A14,Automated (node tests.js),Every stop has a source URL and a check date,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A15,Automated (node tests.js),No two stops share the same coordinates,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A16,Automated (node tests.js),Auto-tour counts down without advancing,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A17,Automated (node tests.js),Auto-tour advances at zero and resets the timer,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A18,Automated (node tests.js),Auto-tour wraps after the last stop,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A19,Automated (node tests.js),Auto-tour with no stops does not crash,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A20,Automated (node tests.js),cameraFor fills defaults,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A21,Automated (node tests.js),cameraFor clamps unsafe values,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A22,Automated (node tests.js),distanceKm: same point is 0,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A23,Automated (node tests.js),distanceKm: 1 degree of latitude is about 111 km,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A24,Automated (node tests.js),nearest() picks the closer stop,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A25,Automated (node tests.js),"Empty search and ""All"" returns every stop",PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A26,Automated (node tests.js),Search matches country text (egypt = 3 stops),PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A27,Automated (node tests.js),Category filter keeps original numbering,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A28,Automated (node tests.js),Search with no match returns an empty list,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A29,Automated (node tests.js),Pause preserves position,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A30,Automated (node tests.js),North increases latitude,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A31,Automated (node tests.js),East increases longitude,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A32,Automated (node tests.js),Heading wraps in both directions,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A33,Automated (node tests.js),Height limits clamp,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A34,Automated (node tests.js),Zero speed keeps position,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+A35,Automated (node tests.js),Duration consistency: one second equals ten 0.1-second steps,PASS,PASS,PASS,node tests.js output: 35 of 35 passed,"Claude, Node v22, 2026-10-07"
+S1,"Smoke (headless Chromium, local Cesium 1.145.0)",No token/key: starts on grid globe with yellow banner,Banner explains missing token; 12 stops listed; no console errors,Banner shown; 12 stop buttons; WebGL canvas; no console errors,PASS,Playwright script + screenshots,"Claude, 2026-10-07"
+S2,Smoke,Next / Previous / stop-list jump / ←→ keys,Stop 2 after Next; Previous from 1 wraps to 12; list item 6 = Timbuktu; → advances,Matched,PASS,Playwright script + screenshots,"Claude, 2026-10-07"
+S3,Smoke,Search 'egypt' and Modern filter,3 of 12 stops; then 1 of 12,'3 of 12 stops' then '1 of 12 stops',PASS,Playwright script + screenshots,"Claude, 2026-10-07"
+S4,Smoke,Auto-tour start/stop; dock does not jitter,aria-pressed true with countdown; false and blank after stop; buttons clickable,Matched (a jitter bug found and fixed here),PASS,Playwright script + screenshots,"Claude, 2026-10-07"
+S5,Smoke,"Free flight moves, turns, nearest stop shown",Latitude changes after Fly; heading +10 after key,Moved; heading 45 -> 55; nearest stop shown,PASS,Playwright script + screenshots,"Claude, 2026-10-07"
+S6,Smoke,Key rejected (mock HTTP 403),Yellow banner says HTTP 403 and what to check,'Google 3D scans did not load: HTTP 403 ...',PASS,Playwright script + screenshots,"Claude, 2026-10-07"
+S7,Smoke,"Layouts at 1440x900, 1100x800, 390x844",Panels/dock do not cover each other; globe full screen,Checked by screenshots; fixes made for dock overlap on narrow screens,PASS,Playwright script + screenshots,"Claude, 2026-10-07"
+S8,Smoke,"Tiles accepted (MOCK empty tileset, not Google)",3D path runs end to end; no errors,Reached 'Drag to orbit...' message; no errors,PASS (mock only),Playwright script + screenshots,"Claude, 2026-10-07"
+S9,Exercise (on temp copy),Missing-data exercise,Warning for Unverified Stop; 12 of 13 usable; tests 12 and 14 fail,Matched on earlier build (before panel redesign; logic unchanged),PASS (record YOUR run below),Playwright script + screenshots,"Claude, 2026-10-07"
+M1,Manual (YOU),Real Google 3D scans load with your ion token,Photogrammetry visible at stop 1; Google attribution visible,,NOT RUN,,
+M2,Manual (YOU),"Each of the 12 stops lands above ground (esp. Nairobi, Lalibela, Johannesburg)","Camera frames the stop, never underground",,NOT RUN,,
+M3,Manual (YOU),Free flight over real scans: height stays above rooftops,Gold point rides above buildings,,NOT RUN,,
+M4,Manual (YOU),Six manual tour checks from Canvas page 05,Replace this row with the six listed on Canvas,,NOT RUN,,
+M5,Manual (YOU),tests.html opened in your browser,35 of 35 passed,,NOT RUN,,
+M6,Manual (YOU),Missing-data exercise on your own copy,"Warning text + failing tests 12 and 14, then restored to 35/35",,NOT RUN,,
+M7,Manual (YOU),Partner follows README on another device,Site runs from README steps alone,,NOT RUN,,
+M8,Manual (YOU),Spot-check 3 coordinates against a map,Each pin lies on the named site,,NOT RUN,,

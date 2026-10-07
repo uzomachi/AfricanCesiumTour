@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Africa: Cities &amp; Civilizations</title>
+<meta name="description" content="A 3D tour and simulated flight over Google Photorealistic 3D Tiles: twelve African places from Giza to Kigali.">
+<link rel="stylesheet" href="https://cesium.com/downloads/cesiumjs/releases/1.145/Build/Cesium/Widgets/widgets.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="globe" aria-label="Interactive 3D globe showing tour stops"></div>
+
+<!-- Title (replaces the old header bar) -->
+<div class="brand">
+  <span class="mark" aria-hidden="true"></span>
+  <div><h1>AFRICA</h1><p>Cities &amp; Civilizations · 3D tour</p></div>
+</div>
+
+<!-- Status / diagnostics line -->
+<p id="message" role="status" hidden></p>
+
+<!-- Top-right buttons -->
+<nav class="topbar" aria-label="Panels and page">
+  <button id="toggleLeft" class="icon" aria-expanded="true" aria-controls="leftPanel" title="Show or hide the stop list">☰ Stops</button>
+  <button id="toggleRight" class="icon" aria-expanded="true" aria-controls="rightPanel" title="Show or hide stop details">ⓘ Details</button>
+  <button id="fs" class="icon" title="Full screen" aria-label="Toggle full screen">⛶</button>
+  <button id="aboutBtn" class="icon" title="About, limits and tests" aria-label="About and limits">?</button>
+</nav>
+
+<!-- LEFT: stop list -->
+<aside id="leftPanel" class="panel left" aria-label="Stop list">
+  <div class="panel-head"><h2>Stops</h2><button class="close" data-close="left" aria-label="Close stop list">×</button></div>
+  <label class="sr" for="search">Search stops</label>
+  <input id="search" type="search" placeholder="Search name, country, era…" autocomplete="off">
+  <div id="cats" class="cats" role="group" aria-label="Filter by type"></div>
+  <p id="listcount" class="muted"></p>
+  <ol id="stoplist" class="stoplist"></ol>
+</aside>
+
+<!-- RIGHT: stop details -->
+<aside id="rightPanel" class="panel right" aria-label="Stop details">
+  <div class="panel-head"><p id="count" class="count"></p><button class="close" data-close="right" aria-label="Close details">×</button></div>
+  <p id="chips" class="chips"></p>
+  <h2 id="name"></h2>
+  <img id="photo" hidden alt="">
+  <p id="desc"></p>
+  <p id="explore" class="explore"></p>
+  <p id="source" class="muted"></p>
+  <p id="nearest" class="muted"></p>
+  <div id="problems" class="problems" role="alert"></div>
+</aside>
+
+<!-- BOTTOM: controls -->
+<div class="dock">
+  <div class="modes" role="group" aria-label="Mode">
+    <button id="modeTour" aria-pressed="true">Guided tour</button>
+    <button id="modeFlight" aria-pressed="false">Free flight</button>
+  </div>
+
+  <div id="dockTour" class="row">
+    <button id="prev" aria-label="Previous stop">◀</button>
+    <button id="next">Next stop ▶</button>
+    <button id="auto" aria-pressed="false">▶ Auto-tour</button>
+    <label class="sr" for="interval">Auto-tour pace</label>
+    <select id="interval">
+      <option value="15">Fast (15 s)</option>
+      <option value="25" selected>Normal (25 s)</option>
+      <option value="40">Slow (40 s)</option>
+    </select>
+    <span id="countdown" class="muted" aria-live="off"></span>
+  </div>
+
+  <div id="dockFlight" class="row" hidden>
+    <button id="fly">Fly</button><button id="pause">Pause</button><button id="reset">Reset</button>
+    <button id="left" aria-label="Turn left 10 degrees">◀ 10°</button><button id="right" aria-label="Turn right 10 degrees">10° ▶</button>
+    <label>Speed m/s <input id="speed" type="number" min="0" max="250" step="10" value="70"></label>
+    <label>Height above ground m <input id="height" type="number" min="50" max="5000" step="50" value="500"></label>
+    <p id="readout" class="readout"></p>
+  </div>
+</div>
+
+<!-- About / limits -->
+<dialog id="about">
+  <form method="dialog"><button class="close" aria-label="Close">×</button></form>
+  <h2>About this tour</h2>
+  <p>Twelve places, from Giza (c. 2600&nbsp;BC) to Kigali and Lagos, showing the continent's long record of building cities, universities and monuments. Every stop lists its source and the date it was checked.</p>
+  <ul>
+    <li><strong>Virtual tour only.</strong> Camera flights are not walking routes, travel times or accessibility guides. Free flight is a steerable point: no lift, drag, bank or collision.</li>
+    <li><strong>3D scans are © Google</strong>; their attributions appear on the globe and must stay visible. Scan dates and detail vary by place, so newer buildings may be missing.</li>
+    <li><strong>No scans?</strong> Without a Cesium ion token (or Google key) in <code>config.js</code> the globe falls back to a plain grid.</li>
+    <li>Keys: ← → change stop in the tour; ← → / A D turn in free flight.</li>
+    <li>Verify every fact before you share it.</li>
+  </ul>
+  <p><a href="tests.html">Run tour tests</a></p>
+</dialog>
+
+<script src="https://cesium.com/downloads/cesiumjs/releases/1.145/Build/Cesium/Cesium.js"></script>
+<script src="places.js"></script>
+<script src="config.js"></script>
+<script src="tour-core.js"></script>
+<script src="flight-core.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
